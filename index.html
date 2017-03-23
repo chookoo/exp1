@@ -12,36 +12,24 @@
         for (i=0; i<s.length; i++)
         {
           if (s[i]=='A')
-          {
-            acount++;
-          }
+	  {acount++;}
           else if (s[i]=='G')
-          {
-            gcount++;
-          }
+          {gcount++; }
           else if (s[i]=='C')
-          {
-            ccount++;
-          }
+          { ccount++; }
           else if (s[i]=='T')
-          {
-            tcount++;
-          }
+          { tcount++;}
            var tot=acount+ccount+gcount+tcount;
-          document.getElementById("res").innerHTML = "A percentage" + acount/tot;
         }
+	document.getElementById("res").innerHTML = "A percentage" + acount/tot;
+	return;
+      }
+	
         var docMod = document.lastModified;
         alert("This file last modified  " + docMod);
         console.log("This file last modified  " + docMod);
-      }
-   </script>
-   
-   <body> 
-
-    <div data-role="page">
-
-	    <div data-role="content">
-		    count(ACTGGAAGCACGGCGGCATCGTGGGCGTGCTGGGTTATGGTGGAGGCGTCATCGGCCGCTATTGCGACCG
+	
+	   count(ACTGGAAGCACGGCGGCATCGTGGGCGTGCTGGGTTATGGTGGAGGCGTCATCGGCCGCTATTGCGACCG
 GCCGGACCTCTTCCCAGAAGTGGCCCACTTTCACACCATGCGCATCAACCAGCCCTCGAGCAAGTTTTAC
 AATACCGACATCCTGAAAAGACTCCGTGAACTGTGGGAAAGGCGCGGCAGCGGCCTCACCAACATGCATG
 GTTCAACGGGGGACATCATCCTGCTCGGTACCACCACCAATGAACTGGAGCCCATATTCTATGAATTGAC
@@ -52,6 +40,14 @@ CGCCATTGCCCGGGCCGACTGCTCCATCATCGGCACCTGGCGCGATCAGATCCGCATCGACCAGGAGGCT
 GTAAAGGCCTACGCTGCCGGGGAACTGGCCCCCAACGGCAATGCCTTCGATACGGGACCAAGTGCTCTGG
 ACATCCAGAAAGAGGTCTGTGACCTGTGCCCCACCCGTTGCATGGAATGGGACGGCAAGACCCTGAAATC
 TGGGGATGAAGAGTGCAC);
+   </script>
+   
+   <body> 
+
+    <div data-role="page">
+
+	    <div data-role="content">
+		    
 		    <p id="res">What is up</p>
 	    </div><!-- /content -->
 
