@@ -22,8 +22,9 @@
           { tcount++;}
            var tot=acount+ccount+gcount+tcount;
         }
-	document.getElementById("res").innerHTML = "A percentage" + acount/tot;
-	return;
+	 var restext = document.getElementById("res");
+	restext.innerHTML = "A percentage" + acount/tot;
+	return;s
       }
 	
         var docMod = document.lastModified;
