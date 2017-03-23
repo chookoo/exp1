@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+      <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+   </head> 
+   
+   <script>
+    var acount=0, gcount=0, ccount=0, tcount=0;
+      function count(string s){
+        for (i=0; i<s.length; i++)
+        {
+          if (s[i]=='A')
+          {
+            acount++;
+          }
+          else if (s[i]=='G')
+          {
+            gcount++;
+          }
+          else if (s[i]=='C')
+          {
+            ccount++;
+          }
+          else if (s[i]=='T')
+          {
+            tcount++;
+          }
+           var tot=acount+ccount+gcount+tcount;
+          document.getElementById("res").innerHTML = "A percentage" + acount/tot;
+        }
+        
+      }
+   </script>
+   
+   <body> 
+
+    <div data-role="page">
+
+	    <div data-role="content">	
+		    <p id="res"></p>
+	    </div><!-- /content -->
+
+    </div><!-- /page -->
+  </body>
+</html>
