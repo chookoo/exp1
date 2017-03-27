@@ -33,46 +33,21 @@
 		    <p id="res"></p>
 	    </div><!-- /content -->
     </div><!-- /page -->
-	<script>
+	   
+<script>
     var acount=0, gcount=0, ccount=0, tcount=0;
       function count(){
 	var s= "ACTGGAAGCACGGCGGCATCGTGGGCGTGCTGGGTTATGGTGGAGGCGTCATCGGCCGCTATTGCGACCGGCCGGACCTCTTCCCAGAAGTGGCCCACTTTCACACCATGCGCATCAACCAGCCCTCGAGCAAGTTTTACAATACCGACATCCTGAAAAGACTCCGTGAACTGTGGGAAAGGCGCGGCAGCGGCCTCACCAACATGCATGGTTCAACGGGGGACATCATCCTGCTCGGTACCACCACCAATGAACTGGAGCCCATATTCTATGAATTGACCCACGATTTGAATATGGACCTGGGCGGTTCGGGCTCCAACTTGCGCACACCGAGCTGCTGTCTGGGCAAGGCCCGTTGCGAGTGGTCCTGCCTTGACACTCAGGCCATCACCAACGACATTACCCATGAGTTCCAGGACGAGCCTTATCGACCCGCCTTTCCTTACAAGTTCAAGTTCAAGACCTCCGGCTGCCCCAACGACTGTGTGGCCGCCATTGCCCGGGCCGACTGCTCCATCATCGGCACCTGGCGCGATCAGATCCGCATCGACCAGGAGGCTGTAAAGGCCTACGCTGCCGGGGAACTGGCCCCCAACGGCAATGCCTTCGATACGGGACCAAGTGCTCTGGACATCCAGAAAGAGGTCTGTGACCTGTGCCCCACCCGTTGCATGGAATGGGACGGCAAGACCCTGAAATCTGGGGATGAAGAGTGCAC";
         for (i=0; i<s.length; i++)
         {
-          if (s[i]=='A')
-	  {acount++;}
-          else if (s[i]=='G')
-          {gcount++; }
-          else if (s[i]=='C')
-          { ccount++; }
-          else if (s[i]=='T')
-          { tcount++;}
+          if (s[i]=='A'){acount++;}
+          else if (s[i]=='G'){gcount++; }
+          else if (s[i]=='C'){ ccount++; }
+          else if (s[i]=='T'){ tcount++;}
            var tot=acount+ccount+gcount+tcount;
         }
 	 var restext = document.getElementById("res");
-	restext.innerHTML = "A percentage: " + 100*acount/tot + "<br>" + "G percentage: " + 100*gcount/tot + "<br>" + "C percentage: " + 100*ccount/tot + "<br>" + "T percentage: " + 100*tcount/tot + "<br>"+"<br><br>+"A count: " + acount + "<br>" + "G count: " + gcount + "<br>" + "C count: " + ccount + "<br>" + "T count: " + tcount + "<br>";
-	acount=0, gcount=0, ccount=0, tcount=0;
-	return;
-      }
-	var z = " ";
-		
-		
-	function count2(z){
-	//var s= "ACTGGAAGCACGGCGGCATCGTGGGCGTGCTGGGTTATGGTGGAGGCGTCATCGGCCGCTATTGCGACCGGCCGGACCTCTTCCCAGAAGTGGCCCACTTTCACACCATGCGCATCAACCAGCCCTCGAGCAAGTTTTACAATACCGACATCCTGAAAAGACTCCGTGAACTGTGGGAAAGGCGCGGCAGCGGCCTCACCAACATGCATGGTTCAACGGGGGACATCATCCTGCTCGGTACCACCACCAATGAACTGGAGCCCATATTCTATGAATTGACCCACGATTTGAATATGGACCTGGGCGGTTCGGGCTCCAACTTGCGCACACCGAGCTGCTGTCTGGGCAAGGCCCGTTGCGAGTGGTCCTGCCTTGACACTCAGGCCATCACCAACGACATTACCCATGAGTTCCAGGACGAGCCTTATCGACCCGCCTTTCCTTACAAGTTCAAGTTCAAGACCTCCGGCTGCCCCAACGACTGTGTGGCCGCCATTGCCCGGGCCGACTGCTCCATCATCGGCACCTGGCGCGATCAGATCCGCATCGACCAGGAGGCTGTAAAGGCCTACGCTGCCGGGGAACTGGCCCCCAACGGCAATGCCTTCGATACGGGACCAAGTGCTCTGGACATCCAGAAAGAGGTCTGTGACCTGTGCCCCACCCGTTGCATGGAATGGGACGGCAAGACCCTGAAATCTGGGGATGAAGAGTGCAC";
-        for (i=0; i<z.length; i++)
-        {
-          if (z[i]=='A')
-	  {acount++;}
-          else if (z[i]=='G')
-          {gcount++; }
-          else if (z[i]=='C')
-          { ccount++; }
-          else if (z[i]=='T')
-          { tcount++;}
-           var tot=acount+ccount+gcount+tcount;
-        }
-	 var restext = document.getElementById("res");
-	restext.innerHTML = "A percentage: " + 100*acount/tot + "\n\n" + "G percentage: " + 100*gcount/tot + "\n" + "C percentage: " + 100*ccount/tot + "\n" + "T percentage: " + 100*tcount/tot + "\n";
+	restext.innerHTML = "A percentage: " + 100*acount/tot + "<br>" + "G percentage: " + 100*gcount/tot + "<br>" + "C percentage: " + 100*ccount/tot + "<br>" + "T percentage: " + 100*tcount/tot + "<br>"+"<br><br>"+"A count: " + acount + "<br>" + "G count: " + gcount + "<br>" + "C count: " + ccount + "<br>" + "T count: " + tcount + "<br>";
 	acount=0, gcount=0, ccount=0, tcount=0;
 	return;
       }
