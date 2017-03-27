@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
    <head> 
-      <title>Hello World</title>  
+      <title>DNA Base Count</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -15,8 +15,21 @@
    <body> 
     <div data-role="page" id="pageone">
 	    <div data-role="content">
-		    <a href="#pageone"	onclick="count();"		data-role="button">Example</a>
-		    <a href="#pageone"	onclick="count2('AGCT');"	data-role="button">Count 2</a>
+		    <p>Press the button below to calculate the number and percentage of each base in the following DNA sequence.</p>
+			<br>
+		    <p>ACTGGAAGCACGGCGGCATCGTGGGCGTGCTGGGTTATGGTGGAGGCGTCATCGGCCGCTATTGCGACCG
+			GCCGGACCTCTTCCCAGAAGTGGCCCACTTTCACACCATGCGCATCAACCAGCCCTCGAGCAAGTTTTAC
+			AATACCGACATCCTGAAAAGACTCCGTGAACTGTGGGAAAGGCGCGGCAGCGGCCTCACCAACATGCATG
+			GTTCAACGGGGGACATCATCCTGCTCGGTACCACCACCAATGAACTGGAGCCCATATTCTATGAATTGAC
+			CCACGATTTGAATATGGACCTGGGCGGTTCGGGCTCCAACTTGCGCACACCGAGCTGCTGTCTGGGCAAG
+			GCCCGTTGCGAGTGGTCCTGCCTTGACACTCAGGCCATCACCAACGACATTACCCATGAGTTCCAGGACG
+			AGCCTTATCGACCCGCCTTTCCTTACAAGTTCAAGTTCAAGACCTCCGGCTGCCCCAACGACTGTGTGGC
+			CGCCATTGCCCGGGCCGACTGCTCCATCATCGGCACCTGGCGCGATCAGATCCGCATCGACCAGGAGGCT
+			GTAAAGGCCTACGCTGCCGGGGAACTGGCCCCCAACGGCAATGCCTTCGATACGGGACCAAGTGCTCTGG
+			ACATCCAGAAAGAGGTCTGTGACCTGTGCCCCACCCGTTGCATGGAATGGGACGGCAAGACCCTGAAATC
+			TGGGGATGAAGAGTGCAC</p>
+		    <br>
+		    <a href="#pageone"	onclick="count();"		data-role="button">Calculate</a>
 		    <p id="res"></p>
 	    </div><!-- /content -->
     </div><!-- /page -->
@@ -37,11 +50,13 @@
            var tot=acount+ccount+gcount+tcount;
         }
 	 var restext = document.getElementById("res");
-	restext.innerHTML = "A percentage: " + 100*acount/tot + "<br>" + "G percentage: " + 100*gcount/tot + "<br>" + "C percentage: " + 100*ccount/tot + "<br>" + "T percentage: " + 100*tcount/tot + "<br>";
+	restext.innerHTML = "A percentage: " + 100*acount/tot + "<br>" + "G percentage: " + 100*gcount/tot + "<br>" + "C percentage: " + 100*ccount/tot + "<br>" + "T percentage: " + 100*tcount/tot + "<br>"+"<br><br>+"A count: " + acount + "<br>" + "G count: " + gcount + "<br>" + "C count: " + ccount + "<br>" + "T count: " + tcount + "<br>";
 	acount=0, gcount=0, ccount=0, tcount=0;
 	return;
       }
 	var z = " ";
+		
+		
 	function count2(z){
 	//var s= "ACTGGAAGCACGGCGGCATCGTGGGCGTGCTGGGTTATGGTGGAGGCGTCATCGGCCGCTATTGCGACCGGCCGGACCTCTTCCCAGAAGTGGCCCACTTTCACACCATGCGCATCAACCAGCCCTCGAGCAAGTTTTACAATACCGACATCCTGAAAAGACTCCGTGAACTGTGGGAAAGGCGCGGCAGCGGCCTCACCAACATGCATGGTTCAACGGGGGACATCATCCTGCTCGGTACCACCACCAATGAACTGGAGCCCATATTCTATGAATTGACCCACGATTTGAATATGGACCTGGGCGGTTCGGGCTCCAACTTGCGCACACCGAGCTGCTGTCTGGGCAAGGCCCGTTGCGAGTGGTCCTGCCTTGACACTCAGGCCATCACCAACGACATTACCCATGAGTTCCAGGACGAGCCTTATCGACCCGCCTTTCCTTACAAGTTCAAGTTCAAGACCTCCGGCTGCCCCAACGACTGTGTGGCCGCCATTGCCCGGGCCGACTGCTCCATCATCGGCACCTGGCGCGATCAGATCCGCATCGACCAGGAGGCTGTAAAGGCCTACGCTGCCGGGGAACTGGCCCCCAACGGCAATGCCTTCGATACGGGACCAAGTGCTCTGGACATCCAGAAAGAGGTCTGTGACCTGTGCCCCACCCGTTGCATGGAATGGGACGGCAAGACCCTGAAATCTGGGGATGAAGAGTGCAC";
         for (i=0; i<z.length; i++)
