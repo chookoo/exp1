@@ -63,7 +63,7 @@
            var tot=acount+ccount+gcount+tcount;
         }
 	 var restext = document.getElementById("res");
-	restext.innerHTML = "A percentage: " + 100*acount/tot + "<br>" + "G percentage: " + 100*gcount/tot + "<br>" + "C percentage: " + 100*ccount/tot + "<br>" + "T percentage: " + 100*tcount/tot + "<br>"+"<br><br>"+"A count: " + acount + "<br>" + "G count: " + gcount + "<br>" + "C count: " + ccount + "<br>" + "T count: " + tcount + "<br>";
+	restext.innerHTML = "A percentage: " + (100*acount/tot).toFixed(2) + "<br>" + "G percentage: " + (100*gcount/tot).toFixed(2)  + "<br>" + "C percentage: " + (100*ccount/tot).toFixed(2)  + "<br>" + "T percentage: " + (100*tcount/tot).toFixed(2)  + "<br>"+"<br><br>"+"A count: " + acount + "<br>" + "G count: " + gcount + "<br>" + "C count: " + ccount + "<br>" + "T count: " + tcount + "<br>";
 	acount=0, gcount=0, ccount=0, tcount=0;
 	return;
       }
