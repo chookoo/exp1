@@ -1,5 +1,21 @@
 <!DOCTYPE html> 
-<html> 
+<html>
+<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+
+Authors in chronological order of contribution:
+Keerthana Chakka
+ 
+Research Educator:
+Timothy Riedel
+triedel@utexas.edu
+ 
+Brief Description of Goal of Code:
+This code aims to determine the percentage and count of all bases in a given DNA Sequence. 
+ 
+Known Issues:
+This app has no known issues. 
+-->
+<!-- This is the CSS styling code for the header, and makes the font Didact Gothic -->
     <style>
 	   p{text-align: center; 
 		font-family:'Didact Gothic'; }
@@ -10,6 +26,7 @@
 	   body{font-family: 'Didact Gothic';font-size: 22px;}
 	   .buttonA{font-family: 'Didact Gothic';font-size: 22px}
    </style>
+<!-- The followng links get the stylesheet and script codes from jquery.com-->
    <head> 
       <title>DNA Base Count</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,10 +40,12 @@
    
    
    <body> 
+<!-- This is the first and only page in the document-->
     <div data-role="page" id="pageone">
 	    <div data-role="header">
 		    <h1>App 5</h1>
 	    </div>
+	    <!-- This displays the DNA sequence and the directions.-->
 	    <div data-role="content">
 		    <p>Press the button below to calculate the number and percentage of each base in the following DNA sequence.</p>
 			<br>
@@ -42,6 +61,7 @@
 			ACATCCAGAAAGAGGTCTGTGACCTGTGCCCCACCCGTTGCATGGAATGGGACGGCAAGACCCTGAAATC
 			TGGGGATGAAGAGTGCAC</p>
 		    <br>
+		    <!-- This is the button to calculate base counts-->
 		    <a href="#pageone"	onclick="count();"		data-role="button">Calculate</a>
 		    <p id="res"></p>
 	    </div><!-- /content -->
@@ -49,7 +69,9 @@
 		 <h1>DIY Diagnostics</h1>
 	    </div>
     </div><!-- /page -->
-	   
+
+<!-- This is the script to count all bases by iterating through a string, and calculate percentage counts from those totals. It also rounds
+the floats to 2 decimal places.-->
 <script>
     var acount=0, gcount=0, ccount=0, tcount=0;
       function count(){
@@ -68,12 +90,11 @@
 	return;
       }
 	
-        var docMod = document.lastModified;
-        alert("This file last modified  " + docMod);
-        console.log("This file last modified  " + docMod);
-	//count();
+        //var docMod = document.lastModified;
+        //alert("This file last modified  " + docMod);
+        //console.log("This file last modified  " + docMod);
+
    </script>
   </body>
 	
-	
-</html>
+</html><!-- End file-->
